@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOW Financial Services - Your Trusted Partner in Wealth & Finance</title>
+    <title>NOW Financial Services - Your Trusted financial service provider</title>
     <!-- You can add more meta tags later for SEO, description, etc. -->
     <style>
         /* Quick basic styles so it doesn't look completely plain */
@@ -40,22 +40,22 @@
 
     <header>
         <h1>Welcome to NOW Financial Services</h1>
-        <p>Empowering Your Financial Future in Kampala and Beyond</p>
+        <p>Empowering Your Financial Future in Kyakazihire town, kibaale district and Beyond</p>
     </header>
 
     <main>
         <section>
             <h2>Who We Are</h2>
-            <p>We provide reliable financial solutions including loans, savings, investments, insurance, and business advisory services tailored for individuals and businesses in Uganda.</p>
+            <p>We provide reliable financial services including mobile money, inter bank transfers, cross boarder transfers,money lending services and business advisory services tailored for individuals and businesses in Uganda.</p>
         </section>
 
         <section>
             <h2>Our Services</h2>
             <ul>
                 <li>Personal & Business Loans</li>
-                <li>High-Interest Savings Accounts</li>
-                <li>Investment & Wealth Management</li>
-                <li>Insurance Products</li>
+                <li></li>
+                <li></li>
+                <li></li>
                 <li>Financial Consulting</li>
             </ul>
         </section>
@@ -63,9 +63,9 @@
         <section>
             <h2>Get in Touch</h2>
             <p>Contact us today for a free consultation!</p>
-            <p>📍 Kampala, Uganda<br>
+            <p>📍 kyakazihire town, kibaale district Uganda<br>
                📧 info@nowfinancialservices.com<br>
-               ☎️ +256 700 123 456</p>
+               ☎️ +256785839860,0753882562</p>
         </section>
     </main>
 
