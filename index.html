@@ -1,1 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NOW Financial Services | Empowering Your Financial Future</title>
+  <meta name="description" content="NOW Financial Services - Reliable loans, business financing, and financial solutions in Kampala, Uganda. Quick approvals, fair rates, and trusted support."/>
+  <style>
+    :root {
+      --primary: #004d99;     /* Deep blue - trust/professional */
+      --accent: #00a651;      /* Green - growth/money */
+      --light: #f8f9fa;
+      --dark: #212529;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
+      color: var(--dark);
+      background: var(--light);
+    }
+    header {
+      background: linear-gradient(rgba(0, 77, 153, 0.85), rgba(0, 77, 153, 0.85)), url('https://images.unsplash.com/photo-1554224155-6726b3ff338f?auto=format&fit=crop&w=1350&q=80') center/cover;
+      color: white;
+      text-align: center;
+      padding: 140px 20px 100px;
+    }
+    header h1 { font-size: 3.5rem; margin-bottom: 15px; }
+    header p { font-size: 1.5rem; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto; }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 14px 32px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin: 12px;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(0,166,81,0.3);
+    }
+    .btn:hover { background: #008c45; transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,166,81,0.4); }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+    section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+    h2 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 50px;
+      font-size: 2.8rem;
+    }
+    .about, .why-us {
+      background: white;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      margin-bottom: 60px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .service-card {
+      background: white;
+      padding: 40px 25px;
+      border-radius: 16px;
+      text-align: center;
+      border: 1px solid #e0e0e0;
+      transition: all 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 15px 40px rgba(0,77,153,0.15);
+      border-color: var(--accent);
+    }
+    .service-card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.6rem; }
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .social a { color: white; margin: 0 18px; font-size: 2rem; text-decoration: none; }
+    .contact-info { font-size: 1.3rem; margin: 30px 0; }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.6rem; }
+      header { padding: 100px 15px 70px; }
+      h2 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
 
+  <header>
+    <h1>NOW Financial Services</h1>
+    <p>Your Trusted Partner for Quick, Fair, and Reliable Financial Solutions in Uganda</p>
+    <p>Fast Approvals • Flexible Terms • Empowering Businesses & Individuals in Kampala & Beyond</p>
+    <a href="#contact" class="btn">Get Started Today</a>
+    <a href="https://wa.me/256YOURNUMBER?text=Hello%20NOW%20Financial%20Services,%20I%20want%20to%20apply%20for..." class="btn" style="background:#25D366;">Chat on WhatsApp</a>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About NOW Financial Services</h2>
+    <p style="font-size:1.25rem; max-width:900px; margin:0 auto; text-align:center;">
+      NOW Financial Services is a dynamic financial solutions provider based in Kampala, Uganda. 
+      We specialize in accessible loans, business financing, micro-credit, and tailored financial support to help individuals, entrepreneurs, and small businesses thrive. 
+      Founded with a mission to drive financial inclusion and economic growth, we offer fast, transparent, and customer-focused services with competitive rates. 
+      Whether you're starting a venture, expanding your trade, or need personal support — we're here to make it happen, NOW.
+    </p>
+    <!-- Add your logo or photo here later: <img src="your-logo.png" alt="NOW Financial Services Logo" style="max-width:250px; display:block; margin:40px auto;"> -->
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Personal Loans</h3>
+        <p>Quick unsecured loans for emergencies, education, medical needs, or personal projects. Fast approval in 24-48 hours.</p>
+      </div>
+      <div class="service-card">
+        <h3>Business & SME Financing</h3>
+        <p>Working capital, expansion loans, asset finance for traders, boda boda operators, shops, and startups.</p>
+      </div>
+      <div class="service-card">
+        <h3>Microfinance & Group Loans</h3>
+        <p>Affordable group lending and micro-credit programs designed for women, youth, and community groups.</p>
+      </div>
+      <div class="service-card">
+        <h3>Investment & Savings Advisory</h3>
+        <p>Guidance on safe investment options, savings plans, and financial planning to build your wealth.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-us">
+    <h2>Why Choose NOW Financial Services?</h2>
+    <ul style="font-size:1.25rem; max-width:900px; margin:0 auto; list-style:none;">
+      <li style="margin:20px 0;">✅ Fast & hassle-free application process</li>
+      <li style="margin:20px 0;">✅ Competitive interest rates with no hidden fees</li>
+      <li style="margin:20px 0;">✅ Flexible repayment plans tailored to you</li>
+      <li style="margin:20px 0;">✅ Licensed & regulated (or in process – add details when ready)</li>
+      <li style="margin:20px 0;">✅ Customer support via WhatsApp, phone & in-person in Kampala</li>
+      <li style="margin:20px 0;">✅ Committed to financial inclusion across Uganda</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Get in Touch Today</h2>
+    <p style="text-align:center; font-size:1.4rem; margin-bottom:40px;">
+      Ready to take the next step? Contact us for inquiries, applications, or consultations.<br>
+      We're here to help – let's build your financial future together!
+    </p>
+    <div class="contact-info" style="text-align:center;">
+      <p>📍 Location: Kampala, Uganda</p>
+      <p>📱 Phone / WhatsApp: +256 [your number here]</p>
+      <p>✉️ Email: info@nowfinancialservices.ug (or your email)</p>
+      <p>🐦 X: <a href="https://x.com/TugumeAraphat" target="_blank">@TugumeAraphat</a> (or company handle)</p>
+      <br>
+      <a href="https://wa.me/256YOURNUMBER?text=Hello%20NOW%20Financial%20Services,%20I'd%20like%20more%20info%20on..." class="btn" style="background:#25D366; font-size:1.3rem; padding:16px 40px;">Message on WhatsApp Now</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 NOW Financial Services. All rights reserved. | Licensed Financial Services Provider in Uganda 🇺🇬</p>
+    <p>Empowering Dreams, One Loan at a Time.</p>
+  </footer>
+
+</body>
+</html>
