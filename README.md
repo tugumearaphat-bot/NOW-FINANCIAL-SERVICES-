@@ -52,7 +52,7 @@
         <section>
             <h2>Our Services</h2>
             <ul>
-                <li>Personal & Business Loans</li>
+                <li>Mobile money,Personal & Business Loans</li>
                 <li></li>
                 <li></li>
                 <li></li>
