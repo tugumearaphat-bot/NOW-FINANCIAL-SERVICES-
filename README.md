@@ -63,7 +63,7 @@
         <section>
             <h2>Get in Touch</h2>
             <p>Contact us today for a free consultation!</p>
-            <p>📍 kyakazihire town, kibaale district Uganda<br>
+            <p>📍 kyakazihire town,kibaale district Uganda<br>
                📧 info@nowfinancialservices.com<br>
                ☎️ +256785839860,0753882562</p>
         </section>
