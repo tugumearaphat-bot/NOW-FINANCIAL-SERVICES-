@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NOW Financial Services - Your trusted fintech partner in Kyakazihire Town, Kibaale District, Uganda. Instant loans, savings, mobile money, insurance & more.">
+    <title>NOW Financial Services | Kyakazihire, Kibaale</title>
+    <!-- Tailwind CSS CDN (exactly like modern sites built by Code with Mosh) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        :root {
+            --primary: 16 185 129; /* emerald-500 - modern fintech green */
+        }
+        
+        .tail-container {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+        }
+        
+        .nav-link {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: rgb(16 185 129);
+            transform: translateY(-2px);
+        }
+        
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+        }
+        
+        .stat-number {
+            font-family: 'Playfair Display', sans-serif;
+        }
+        
+        .hero-headline {
+            font-family: 'Playfair Display', sans-serif;
+        }
+    </style>
+</head>
+<body class="tail-container bg-zinc-950 text-white overflow-x-hidden">
+    <!-- NAVBAR - Sticky, clean, exactly like Code with Mosh premium feel -->
+    <nav class="bg-zinc-950 border-b border-zinc-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-emerald-500 rounded-2xl flex items-center justify-center text-3xl font-bold shadow-lg">N</div>
+                <div>
+                    <span class="text-2xl font-bold tracking-tighter hero-headline">NOW</span>
+                    <span class="text-emerald-400 text-sm font-medium block -mt-1">FINANCIAL</span>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#impact" class="nav-link">Our Impact</a>
+                <a href="#testimonials" class="nav-link">Stories</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button onclick="showLoginModal()" 
+                        class="hidden sm:block px-6 py-2.5 text-sm font-semibold border border-zinc-700 hover:border-emerald-500 rounded-2xl transition-all">
+                    Login
+                </button>
+                <button onclick="window.location.href='#contact'" 
+                        class="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-2.5 text-sm font-semibold rounded-2xl transition-all shadow-xl shadow-emerald-500/30">
+                    Apply Now
+                </button>
+
+                <!-- Mobile Hamburger -->
+                <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-zinc-800 py-6 px-6">
+            <div class="flex flex-col gap-6 text-lg font-medium">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#impact" class="nav-link">Our Impact</a>
+                <a href="#testimonials" class="nav-link">Stories</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <div class="pt-6 border-t border-zinc-700 flex flex-col gap-4">
+                    <button onclick="showLoginModal()" class="w-full py-4 border border-zinc-700 rounded-2xl">Login</button>
+                    <button onclick="window.location.href='#contact'" class="w-full bg-emerald-500 py-4 rounded-2xl">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO - Full bleed, premium like Code with Mosh new course hero -->
+    <section id="home" class="hero-bg h-screen flex items-center relative">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-5 py-2 rounded-3xl text-sm mb-6">
+                    <span class="text-emerald-400">🇺🇬</span>
+                    <span class="font-medium">Kyakazihire • Kibaale District</span>
+                </div>
+                
+                <h1 class="hero-headline text-6xl md:text-7xl font-bold leading-none tracking-tighter mb-6">
+                    Financial Freedom,<br><span class="text-emerald-400">NOW</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-zinc-300 max-w-xl mx-auto mb-10">
+                    Instant loans • Secure savings • Mobile money • Insurance. 
+                    Built for Ugandans in Kibaale District.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" 
+                            class="bg-white text-zinc-950 hover:bg-zinc-200 font-semibold text-lg px-10 py-6 rounded-3xl flex items-center justify-center gap-3 shadow-2xl">
+                        <i class="fa-solid fa-rocket"></i>
+                        Open Account Free
+                    </button>
+                    <button onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})" 
+                            class="border-2 border-white/80 hover:border-white font-semibold text-lg px-10 py-6 rounded-3xl flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-handshake"></i>
+                        See All Services
+                    </button>
+                </div>
+
+                <div class="mt-16 flex items-center justify-center gap-8 text-xs text-zinc-400">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+                        <span>Bank of Uganda Licensed</span>
+                    </div>
+                    <div>•</div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-mobile-screen text-emerald-400"></i>
+                        <span>MTN MoMo &amp; Airtel Money</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-zinc-400 text-xs">
+            <span class="mb-2">SCROLL TO EXPLORE</span>
+            <i class="fa-solid fa-chevron-down animate-bounce"></i>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="bg-zinc-900 py-6">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-6 opacity-75">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_of_Uganda_Logo.svg/2560px-Bank_of_Uganda_Logo.svg.png" alt="Bank of Uganda" class="h-8">
+                <img src="https://www.mtn.co.ug/wp-content/uploads/2023/06/MTN-MoMo-Logo.png" alt="MTN MoMo" class="h-8">
+                <img src="https://www.airteluganda.com/assets/images/logo-airtel-money.png" alt="Airtel Money" class="h-8">
+                <span class="text-emerald-400 font-medium text-sm">SECURE • FAST • LOCAL</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES SECTION - Card grid like Code with Mosh courses -->
+    <section id="services" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-emerald-400 text-sm font-semibold tracking-widest">SERVICES</span>
+                <h2 class="text-5xl font-bold hero-headline tracking-tighter mt-3">Everything you need,<br>right here in Kibaale</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="service-card bg-zinc-900 rounded-3xl p-8 group">
+                    <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-8 text-4xl group-hover:scale-110 transition">
+                        💰
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Instant Micro-Loans</h3>
+                    <p class="text-zinc-400 mb-6">Get UGX 50,000 – 5,000,000 in minutes. No collateral needed for first-time borrowers in Kyakazihire.</p>
+                    <a href="#" class="text-emerald-400 font-medium flex items-center gap-2">Apply in 60 seconds →</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="service-card bg-zinc-900 rounded-3xl p-8 group">
+                    <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-8 text-4xl group-hover:scale-110 transition">
+                        🏦
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">High-Yield Savings</h3>
+                    <p class="text-zinc-400 mb-6">Earn up to 12% per year. Daily interest. Withdraw anytime via MoMo or branch.</p>
+                    <a href="#" class="text-emerald-400 font-medium flex items-center gap-2">Start saving today →</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="service-card bg-zinc-900 rounded-3xl p-8 group">
+                    <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-8 text-4xl group-hover:scale-110 transition">
+                        📱
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Mobile Money Hub</h3>
+                    <p class="text-zinc-400 mb-6">Send, receive, pay bills &amp; school fees instantly with MTN &amp; Airtel. Zero fees on transfers to NOW users.</p>
+                    <a href="#" class="text-emerald-400 font-medium flex items-center gap-2">Link your wallet →</a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="service-card bg-zinc-900 rounded-3xl p-8 group">
+                    <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-8 text-4xl group-hover:scale-110 transition">
+                        🌾
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Crop &amp; Life Insurance</h3>
+                    <p class="text-zinc-400 mb-6">Protect your farm and family for as little as UGX 5,000/month. Payouts in 48 hours.</p>
+                    <a href="#" class="text-emerald-400 font-medium flex items-center gap-2">Get covered →</a>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="service-card bg-zinc-900 rounded-3xl p-8 group">
+                    <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-8 text-4xl group-hover:scale-110 transition">
+                        🏪
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Business Loans</h3>
+                    <p class="text-zinc-400 mb-6">Grow your shop, boda business or salon. Up to UGX 20M with flexible repayment.</p>
+                    <a href="#" class="text-emerald-400 font-medium flex items-center gap-2">Scale your business →</a>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="service-card bg-zinc-900 rounded-3xl p-8 group">
+                    <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-8 text-4xl group-hover:scale-110 transition">
+                        🌍
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Remittances</h3>
+                    <p class="text-zinc-400 mb-6">Receive money from family abroad instantly &amp; at the best rates in Kibaale.</p>
+                    <a href="#" class="text-emerald-400 font-medium flex items-center gap-2">Receive money →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-emerald-400 uppercase tracking-widest text-sm">Since 2023</span>
+                    <h2 class="text-5xl hero-headline font-bold tracking-tighter mt-4 leading-none">Locally rooted.<br>Technologically advanced.</h2>
+                    <p class="mt-8 text-lg text-zinc-400 leading-relaxed">
+                        NOW Financial Services was born in Kyakazihire Town to solve real problems faced by farmers, traders and families in Kibaale District. 
+                        We combine modern fintech with Ugandan values — fast, fair, and always human.
+                    </p>
+                    <div class="mt-10 flex items-center gap-6">
+                        <div class="flex -space-x-6">
+                            <div class="w-10 h-10 bg-zinc-700 border-2 border-zinc-900 rounded-2xl"></div>
+                            <div class="w-10 h-10 bg-emerald-500 border-2 border-zinc-900 rounded-2xl"></div>
+                        </div>
+                        <div class="text-sm">
+                            <span class="font-semibold">1200+</span><br>
+                            <span class="text-zinc-400">Happy clients in Kibaale</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="https://picsum.photos/id/201/800/600" alt="Kyakazihire community" 
+                         class="rounded-3xl shadow-2xl">
+                    <div class="absolute -bottom-6 -left-6 bg-zinc-800 rounded-3xl p-6 max-w-[220px]">
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-map-marker-alt text-4xl text-emerald-400"></i>
+                            <div>
+                                <p class="font-semibold">Kyakazihire Town</p>
+                                <p class="text-xs text-zinc-400">Kibaale District, Uganda</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACT / STATS -->
+    <section id="impact" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="stat-number text-6xl font-bold text-emerald-400 mb-2" data-target="2500">0</div>
+                    <p class="text-zinc-400">Clients served</p>
+                </div>
+                <div>
+                    <div class="stat-number text-6xl font-bold text-emerald-400 mb-2" data-target="450000000">0</div>
+                    <p class="text-zinc-400">UGX disbursed</p>
+                </div>
+                <div>
+                    <div class="stat-number text-6xl font-bold text-emerald-400 mb-2" data-target="98">0</div>
+                    <p class="text-zinc-400">% On-time repayments</p>
+                </div>
+                <div>
+                    <div class="stat-number text-6xl font-bold text-emerald-400 mb-2" data-target="12">0</div>
+                    <p class="text-zinc-400">% Average savings return</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS - Simple carousel like Code with Mosh -->
+    <section id="testimonials" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-emerald-400">REAL STORIES</span>
+                <h2 class="text-5xl font-bold tracking-tighter mt-3">What our neighbours say</h2>
+            </div>
+
+            <div id="testimonial-slider" class="max-w-2xl mx-auto">
+                <div class="testimonial bg-zinc-800 rounded-3xl p-10 text-center">
+                    <p class="text-xl italic">"I got my first loan in 15 minutes and bought seeds for my maize farm. NOW really changed my life!"</p>
+                    <div class="mt-10">
+                        <div class="font-semibold">Nalubega Sarah</div>
+                        <div class="text-sm text-zinc-400">Farmer, Kyakazihire</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section id="contact" class="py-24 bg-black">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-zinc-900 rounded-3xl p-12 md:p-16">
+                <h2 class="text-4xl font-bold text-center mb-12">Get in touch with us today</h2>
+                
+                <form id="contact-form" class="space-y-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <label class="block text-sm mb-2">Full Name</label>
+                            <input type="text" id="name" required 
+                                   class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-5 focus:outline-none focus:border-emerald-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm mb-2">Phone (with WhatsApp)</label>
+                            <input type="tel" id="phone" required 
+                                   class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-5 focus:outline-none focus:border-emerald-500">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm mb-2">Email</label>
+                        <input type="email" id="email" required 
+                               class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-5 focus:outline-none focus:border-emerald-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm mb-2">How can we help you?</label>
+                        <textarea id="message" rows="5" required
+                                  class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-5 focus:outline-none focus:border-emerald-500"></textarea>
+                    </div>
+                    
+                    <button type="submit"
+                            class="w-full bg-emerald-500 hover:bg-emerald-600 py-7 text-lg font-semibold rounded-3xl transition-all">
+                        Send Message — We'll reply in &lt; 2 hours
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-zinc-800 py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-5 gap-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-emerald-500 rounded-2xl flex items-center justify-center text-3xl font-bold">N</div>
+                        <span class="text-3xl font-bold hero-headline">NOW</span>
+                    </div>
+                    <p class="text-zinc-400 max-w-sm">
+                        Modern financial services for Kyakazihire Town and the whole of Kibaale District.
+                    </p>
+                    <div class="mt-8 text-xs text-zinc-500">
+                        © 2026 NOW Financial Services Uganda Ltd.<br>
+                        Licensed by Bank of Uganda
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="uppercase text-xs tracking-widest mb-6 text-zinc-400">Quick Links</p>
+                    <div class="space-y-4 text-sm">
+                        <a href="#services" class="block hover:text-emerald-400">Services</a>
+                        <a href="#about" class="block hover:text-emerald-400">About Us</a>
+                        <a href="#" class="block hover:text-emerald-400">Careers</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="uppercase text-xs tracking-widest mb-6 text-zinc-400">Contact</p>
+                    <div class="space-y-4 text-sm">
+                        <p>Kyakazihire Town<br>Kibaale District, Uganda</p>
+                        <p>+256 777 123 456</p>
+                        <p>hello@nowfinance.ug</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="uppercase text-xs tracking-widest mb-6 text-zinc-400">Follow Us</p>
+                    <div class="flex gap-6 text-2xl">
+                        <i class="fa-brands fa-whatsapp hover:text-emerald-400 cursor-pointer"></i>
+                        <i class="fa-brands fa-facebook hover:text-emerald-400 cursor-pointer"></i>
+                        <i class="fa-brands fa-x-twitter hover:text-emerald-400 cursor-pointer"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center text-xs text-zinc-500 mt-20">
+                Built with ❤️ for Uganda • Fully responsive &amp; secure
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIN MODAL (simple modern popup) -->
+    <div id="login-modal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[100]">
+        <div class="bg-zinc-900 rounded-3xl max-w-md w-full mx-4 p-10">
+            <h3 class="text-3xl font-semibold mb-8 text-center">Welcome back</h3>
+            
+            <div class="space-y-6">
+                <input type="tel" placeholder="Phone number" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-5">
+                <input type="password" placeholder="PIN" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-5">
+                
+                <button onclick="fakeLogin()" 
+                        class="w-full bg-emerald-500 py-5 rounded-2xl font-semibold">Login with PIN</button>
+                
+                <p class="text-center text-sm text-zinc-400">Forgot PIN? <span class="text-emerald-400 cursor-pointer">Reset</span></p>
+            </div>
+            
+            <button onclick="hideLoginModal()" 
+                    class="absolute top-6 right-6 text-3xl text-zinc-400">×</button>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind script run
+        function initializeTailwind() {
+            // Already loaded via CDN
+        }
+
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            } else {
+                mobileBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            }
+        });
+
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) target.scrollIntoView({ behavior: 'smooth' });
+                    // Close mobile menu
+                    mobileMenu.classList.add('hidden');
+                    mobileBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                }
+            });
+        });
+
+        // Contact form
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            alert(`Thank you, ${name}! Your message has been received. A NOW agent in Kyakazihire will contact you within 2 hours.`);
+            this.reset();
+        });
+
+        // Fake login modal
+        function showLoginModal() {
+            document.getElementById('login-modal').classList.remove('hidden');
+            document.getElementById('login-modal').classList.add('flex');
+        }
+        
+        function hideLoginModal() {
+            document.getElementById('login-modal').classList.add('hidden');
+            document.getElementById('login-modal').classList.remove('flex');
+        }
+        
+        function fakeLogin() {
+            hideLoginModal();
+            setTimeout(() => {
+                alert("✅ Logged in successfully! Welcome to your NOW dashboard.");
+            }, 400);
+        }
+
+        // Counter animation for stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                let count = 0;
+                const increment = Math.ceil(target / 60);
+                
+                const timer = setInterval(() => {
+                    count += increment;
+                    if (count >= target) {
+                        count = target;
+                        clearInterval(timer);
+                    }
+                    counter.textContent = count.toLocaleString();
+                }, 40);
+            });
+        }
+
+        // Trigger counter when in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+        
+        // Observe impact section
+        setTimeout(() => {
+            const impactSection = document.getElementById('impact');
+            if (impactSection) observer.observe(impactSection);
+        }, 1000);
+
+        // Keyboard escape for modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") {
+                const modal = document.getElementById('login-modal');
+                if (!modal.classList.contains('hidden')) hideLoginModal();
+            }
+        });
+
+        // Initialize everything
+        window.onload = function() {
+            initializeTailwind();
+            console.log('%c✅ NOW Financial Services website loaded successfully!\nFully responsive, modern fintech design inspired by premium platforms.', 'color:#10b981; font-size:12px');
+        };
+    </script>
+</body>
+</html>
