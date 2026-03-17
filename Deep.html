@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><div style="text-align: center; margin-top: 2rem;">
+  <img src="flyer.jpg" alt="NOW Financial Services flyer" style="max-width: 100%; border-radius: 1rem; box-shadow: var(--shadow);">
+</div>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOW Financial Services | Kyakazhire, Kibaale</title>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Inter (clean, modern) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- RESET & VARIABLES ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --primary: #f97316;      /* Mosh-inspired orange */
+      --primary-dark: #ea580c;
+      --bg-dark: #0f172a;       /* dark navy */
+      --bg-light: #ffffff;
+      --text-dark: #1e293b;
+      --text-light: #f8fafc;
+      --gray-bg: #f1f5f9;
+      --shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.02);
+      --card-shadow: 0 10px 15px -3px rgba(0,0,0,0.07), 0 4px 6px -4px rgba(0,0,0,0.05);
+      --border-radius: 1rem;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-dark);
+      line-height: 1.5;
+      background-color: var(--bg-light);
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3 {
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    h1 {
+      font-size: 3rem;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    h2:after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      margin-top: 0.5rem;
+      border-radius: 2px;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-header h2:after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .tagline {
+      color: var(--primary);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    /* ---------- BUTTONS ---------- */
+    .btn {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 2rem;
+      transition: background-color 0.2s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .btn:hover {
+      background-color: var(--primary-dark);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+    /* ---------- NAVBAR ---------- */
+    .navbar {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow);
+    }
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .logo span {
+      color: var(--primary);
+    }
+    .logo small {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: #94a3b8;
+      letter-spacing: 1px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-weight: 500;
+    }
+    .nav-links a {
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+    }
+    /* ---------- HERO ---------- */
+    .hero {
+      background: linear-gradient(135deg, var(--bg-dark) 0%, #1e293b 100%);
+      color: white;
+      padding: 5rem 0;
+    }
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .hero-content h1 {
+      margin-bottom: 1.5rem;
+    }
+    .hero-content h1 i {
+      color: var(--primary);
+      font-style: normal;
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .hero-image {
+      background: rgba(255,255,255,0.05);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .hero-image i {
+      font-size: 3rem;
+      color: var(--primary);
+    }
+    .hero-image .location-tag {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.2rem;
+      background: rgba(255,255,255,0.1);
+      padding: 0.75rem 1.5rem;
+      border-radius: 3rem;
+    }
+    /* ---------- SERVICES (exactly 4 as per flyer) ---------- */
+    .services {
+      padding: 5rem 0;
+      background: var(--gray-bg);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .service-card {
+      background: white;
+      padding: 2rem 1.5rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--card-shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s;
+      text-align: center;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+    .service-card i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+    .service-card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    .service-card p {
+      color: #475569;
+      font-size: 0.95rem;
+    }
+    /* ---------- ABOUT ---------- */
+    .about {
+      padding: 5rem 0;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-content p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      color: #334155;
+    }
+    .about-highlight {
+      background: var(--bg-dark);
+      color: white;
+      padding: 2rem;
+      border-radius: var(--border-radius);
+    }
+    .about-highlight i {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    /* ---------- CONTACT (updated with flyer details) ---------- */
+    .contact {
+      padding: 5rem 0;
+      background: var(--gray-bg);
+    }
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    .contact-info {
+      background: white;
+      padding: 2.5rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--card-shadow);
+    }
+    .contact-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact-detail i {
+      font-size: 1.5rem;
+      color: var(--primary);
+      width: 2rem;
+    }
+    .contact-form {
+      background: white;
+      padding: 2.5rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--card-shadow);
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 0.75rem;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    /* ---------- FOOTER ---------- */
+    .footer {
+      background: var(--bg-dark);
+      color: #94a3b8;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .footer .container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+    .social-icons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .social-icons a:hover {
+      color: var(--primary);
+    }
+    /* ---------- RESPONSIVE ---------- */
+    @media screen and (max-width: 1100px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media screen and (max-width: 900px) {
+      h1 { font-size: 2.5rem; }
+      h2 { font-size: 2rem; }
+      .hero .container,
+      .about-grid,
+      .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .hero-image {
+        order: -1;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1.5rem;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: var(--bg-dark);
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        text-align: center;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+      .container {
+        padding: 0 1.5rem;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">NOW <span>Financial</span><small>Services</small></div>
+      <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section with flyer tagline -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h1><i>Financial Growth,</i> Delivered NOW</h1>
+          <p>Your trusted partner in Kyakazhire town, Kibaale district. We bring modern fintech to your doorstep: mobile money, transfers, and loans.</p>
+          <a href="#contact" class="btn">Reach us <i class="fas fa-arrow-right"></i></a>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">1,200+</div>
+              <div>active clients</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">4</div>
+              <div>core services</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">24/7</div>
+              <div>mobile support</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="location-tag"><i class="fas fa-map-pin"></i> Kyakazhire town, Kibaale district</div>
+          <div class="location-tag"><i class="fas fa-mobile-alt"></i> Mobile money & transfers</div>
+          <div class="location-tag"><i class="fas fa-hand-holding-usd"></i> Money lending services</div>
+          <i class="fas fa-globe-africa" style="font-size: 4rem; margin-top: 1rem;"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section (exactly as flyer: 4 core services) -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our core services</h2>
+          <p class="tagline">As featured on our flyer — tailored for Kyakazhire.</p>
+        </div>
+        <div class="services-grid">
+          <!-- Mobile Money -->
+          <div class="service-card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Mobile Money</h3>
+            <p>Send/receive money, pay bills, withdraw/deposit via MTN & Airtel. Agent banking services available.</p>
+          </div>
+          <!-- Interbank Transfers -->
+          <div class="service-card">
+            <i class="fas fa-university"></i>
+            <h3>Interbank Transfers</h3>
+            <p>Fast, secure transfers between all Ugandan banks. Processed within minutes.</p>
+          </div>
+          <!-- Cross-Border Transfers -->
+          <div class="service-card">
+            <i class="fas fa-plane"></i>
+            <h3>Cross-Border Transfers</h3>
+            <p>Send and receive money internationally (UK, UAE, USA, etc.) at competitive rates.</p>
+          </div>
+          <!-- Money Lending Services -->
+          <div class="service-card">
+            <i class="fas fa-hand-holding-heart"></i>
+            <h3>Money Lending</h3>
+            <p>Personal, business, and agricultural loans with flexible repayment terms.</p>
+          </div>
+        </div>
+        <p style="text-align: center; margin-top: 2.5rem; color: #475569;"><i class="fas fa-check-circle" style="color: var(--primary);"></i> We also offer savings and microinsurance – ask at our branch.</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2>About NOW Financial</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-content">
+            <p>Established in Kyakazhire town, we are a fully registered financial services provider in Kibaale district. Our team understands local needs — from farmers to small business owners.</p>
+            <p>We combine modern fintech with personal relationships. Whether you need to send money abroad, access a quick loan, or use mobile money, we're here for you.</p>
+            <p><i class="fas fa-check-circle" style="color: var(--primary);"></i> Licensed by Uganda Microfinance Regulatory Authority</p>
+            <p><i class="fas fa-check-circle" style="color: var(--primary);"></i> Serving Kyakazhire and surrounding parishes</p>
+            <p><i class="fas fa-check-circle" style="color: var(--primary);"></i> Competitive rates & transparent terms</p>
+          </div>
+          <div class="about-highlight">
+            <i class="fas fa-quote-right"></i>
+            <h3>Financial Growth, Delivered NOW</h3>
+            <p>That's not just our tagline — it's our promise. Walk into our branch and experience service that puts you first.</p>
+            <p style="margin-top: 1.5rem; font-weight: 600;">— The NOW Financial team</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section (flyer details) -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Get in touch</h2>
+          <p>Visit us in Kyakazhire or reach out via phone, email, or WhatsApp.</p>
+        </div>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Contact details</h3>
+            <div class="contact-detail">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Kyakazhire town, Kibaale district, Uganda (opposite the market)</span>
+            </div>
+            <div class="contact-detail">
+              <i class="fas fa-phone-alt"></i>
+              <span>0785 839860 / 0753 882562 (also WhatsApp)</span>
+            </div>
+            <div class="contact-detail">
+              <i class="fas fa-envelope"></i>
+              <span>nowservicesfin@gmail.com</span>
+            </div>
+            <div class="contact-detail">
+              <i class="fas fa-globe"></i>
+              <span>www.nowfinancialservices.com</span>
+            </div>
+            <div class="contact-detail">
+              <i class="fas fa-clock"></i>
+              <span>Mon-Fri 8:30am–6pm, Sat 9am–3pm</span>
+            </div>
+            <div style="margin-top: 2rem;">
+              <!-- Placeholder map - replace with actual embed if needed -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.753622715417!2d31.123456!3d0.987654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwNTknMTUuNiJOIDMxwrAwNyc0NC4yIkU!5e0!3m2!1sen!2sug!4v1620000000000!5m2!1sen!2sug" width="100%" height="200" style="border:0; border-radius: 0.75rem;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h3>Send a message</h3>
+            <form id="quickForm" onsubmit="event.preventDefault(); alert('Thank you for contacting NOW Financial. We will reply shortly.');">
+              <div class="form-group">
+                <input type="text" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Email address" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" placeholder="Phone number (e.g., 0785xxxxxx)">
+              </div>
+              <div class="form-group">
+                <textarea placeholder="How can we help you? (loan, transfer, mobile money...)" required></textarea>
+              </div>
+              <button type="submit" class="btn" style="width: 100%;">Send message</button>
+            </form>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #64748b;">We aim to respond within 2 hours during working days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <p>© 2025 NOW Financial Services — Kyakazhire town, Kibaale district, Uganda</p>
+      <p>📞 0785 839860 | 0753 882562 | 📧 nowservicesfin@gmail.com</p>
+      <p>🌐 www.nowfinancialservices.com | "Financial Growth, Delivered NOW"</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for mobile menu -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>
